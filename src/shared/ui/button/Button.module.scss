@@ -1,0 +1,21 @@
+.button {
+  padding: 10px 16px;
+  border-radius: 8px;
+}
+
+.primary {
+  background-color: var(--blue);
+  color: white;
+  border: none;
+  &:hover {
+    background-color: #2f87e6;
+  }
+}
+.secondary {
+  background-color: transparent;
+  border: #007bff 2px solid;
+  transition: 0.2s;
+  &:hover {
+    background-color: #2929291d;
+  }
+}

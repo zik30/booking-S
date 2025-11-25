@@ -1,0 +1,10 @@
+@use "./null.scss";
+@use "./var.scss";
+@use "./mixins.scss";
+
+html,
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--bgc);
+  font-size: 16px;
+}

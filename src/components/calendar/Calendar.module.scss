@@ -1,0 +1,79 @@
+.calendar {
+  width: 500px;
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+  .calendarController {
+    background-color: var(--black);
+    border-radius: 16px;
+    margin-bottom: 3px;
+    padding: 10px 20px;
+
+    .year {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+
+      .arrows {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .bottomPanel {
+    padding: 10px 20px;
+    border-radius: 16px;
+    margin-top: 3px;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .month {
+    padding: 20px;
+    background-color: var(--black);
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 30px clamp(4px, 1vw, 20px);
+    border-radius: 16px;
+
+    .square {
+      width: 36px;
+      height: 36px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.3s;
+
+      &.currentMonth {
+        cursor: pointer;
+      }
+      &.currentDate {
+        background-color: var(--white);
+      }
+
+      &.selected {
+        background-color: var(--blue);
+        color: var(--white);
+      }
+      &.rangeStart {
+        background: var(--blue);
+        border-radius: 50% 0 0 50%;
+      }
+
+      &.rangeFinish {
+        background: var(--blue);
+        border-radius: 0 50% 50% 0;
+      }
+
+      &.rangeBetween {
+        background: rgba(0, 145, 255, 0.2);
+      }
+    }
+  }
+}

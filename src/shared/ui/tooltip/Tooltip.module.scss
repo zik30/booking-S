@@ -1,0 +1,39 @@
+.wrapper {
+  position: relative;
+  display: inline-block;
+
+  // Показываем tooltip только при наведении
+  &:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -10px);
+  }
+}
+.tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0;
+  visibility: hidden;
+
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  z-index: 9999;
+
+  transition: all 0.2s ease;
+
+  // Стрелочка
+  &::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: rgba(0, 0, 0, 0.9);
+  }
+}

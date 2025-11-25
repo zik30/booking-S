@@ -1,0 +1,18 @@
+.card {
+  width: 400px;
+  padding: 10px 15px;
+  border-radius: 16px;
+  background-color: var(--blue);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .control {
+    color: var(--white);
+    cursor: pointer;
+    transition: 0.2s;
+    &:hover {
+      scale: 1.05;
+    }
+  }
+}

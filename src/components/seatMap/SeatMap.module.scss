@@ -1,0 +1,60 @@
+.table {
+  width: 100%;
+  background-color: var(--black);
+  border-radius: 16px;
+  padding: 20px;
+
+  .cell {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  td {
+    position: relative;
+  }
+
+  tr:nth-child(even) {
+    background-color: var(--bgc);
+  }
+}
+.comp {
+  cursor: pointer;
+  transition: 0.2s;
+  &:hover {
+    color: rgb(247, 211, 120);
+  }
+}
+.selected {
+  background-color: var(--blue);
+  color: var(--white);
+}
+.free {
+  color: var(--white);
+}
+.blocked {
+  color: rgb(249, 91, 91);
+}
+.perm {
+  color: rgb(70, 163, 245);
+}
+.black {
+  color: var(--black);
+}
+.taken {
+  color: green;
+}
+.noSeat {
+  opacity: 0;
+  cursor: none;
+}
+.panel {
+  width: 100%;
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 20px;
+  border-radius: 16px;
+  margin-top: 5px;
+}
