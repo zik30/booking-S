@@ -7,6 +7,7 @@ import { PeriodPage } from "pages/PeriodPage";
 import { PermanentPage } from "pages/PermanentPage";
 import { MyBookingsPage } from "pages/MyBookingsPage";
 import { NotFoundPage } from "pages/NotFoundPage";
+import { MainPage } from "pages/MainPage";
 
 export const router = () =>
   createBrowserRouter([
@@ -14,6 +15,10 @@ export const router = () =>
       path: "/",
       element: <Layout />,
       children: [
+        {
+          path: "/",
+          element: <MainPage />,
+        },
         {
           path: paths.openSpace,
           element: <OpenSpacePage />,

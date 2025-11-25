@@ -1,7 +1,10 @@
 import { useMutation } from "@tanstack/react-query";
 import { $mainApi } from "shared/lib/requester";
+import { useUser } from "shared/lib/useUser";
 
 export const useBookSeatMutation = () => {
+  const { user_id } = useUser();
+
   return useMutation({
     mutationKey: ["booking"],
     mutationFn: async ({
@@ -20,7 +23,7 @@ export const useBookSeatMutation = () => {
         {},
         {
           params: {
-            user_id: 123456,
+            user_id,
             room,
             row,
             seat,
@@ -34,6 +37,8 @@ export const useBookSeatMutation = () => {
 };
 
 export const useBookPermMutation = () => {
+  const { user_id } = useUser();
+
   return useMutation({
     mutationKey: ["booking-permanent"],
     mutationFn: async ({
@@ -50,7 +55,7 @@ export const useBookPermMutation = () => {
         {},
         {
           params: {
-            user_id: 123456,
+            user_id,
             room,
             row,
             seat,
@@ -63,6 +68,8 @@ export const useBookPermMutation = () => {
 };
 
 export const useBookPeriodMutation = () => {
+  const { user_id } = useUser();
+
   return useMutation({
     mutationKey: ["booking"],
     mutationFn: async ({
@@ -79,7 +86,7 @@ export const useBookPeriodMutation = () => {
       const response = await $mainApi.post(
         "/booking/multi_create",
         {
-          user_id: 123456,
+          user_id,
           room,
           row,
           seat,

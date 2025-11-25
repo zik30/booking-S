@@ -9,17 +9,19 @@ export const Button: FC<ButtonProps> = ({
   children,
   onClick,
   disabled,
+  fullwidth = false,
 }) => {
   return (
     <button
       className={classNames(
         styles.button,
         styles[variant],
-        disabled && styles.disabled
+        disabled && styles.disabled,
+        fullwidth && styles.fullwidth
       )}
       onClick={onClick}
     >
-      <Typography variant="bodyText" color="white">
+      <Typography variant="bodyText" color="white" align="center">
         {children}
       </Typography>
     </button>
