@@ -1,4 +1,4 @@
-import styles from "./ToolTip.module.scss";
+import styles from "./Tooltip.module.scss";
 import { type FC } from "react";
 import type { ToolTipProps } from "./types";
 import { Typography } from "../typography/Typography";
