@@ -6,11 +6,10 @@ export const MainPage: FC = () => {
   const { user_id, setUserId } = useUser();
 
   useEffect(() => {
-    // Проверяем, есть ли объект WebApp
     if (window.Telegram?.WebApp?.initDataUnsafe) {
       const user = window.Telegram.WebApp.initDataUnsafe.user;
-      if (user != user_id) {
-        setUserId(user.id); // вот он user_id
+      if (user && user.id !== user_id) {
+        setUserId(user.id);
       }
     }
   }, []);
