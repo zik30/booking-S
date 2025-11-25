@@ -41,8 +41,8 @@ export const useDeleteMyBookingMutation = () => {
     },
     onSuccess: (_, variables) => {
       // ✅ обновляем кэш, чтобы карточка исчезла сразу
-      queryClient.setQueryData(["my-bookings"], (oldData: any) =>
-        oldData?.filter((booking: any) => booking.id !== variables.booking_id)
+      queryClient.setQueryData(["my-bookings"], (oldData: Seat[]) =>
+        oldData?.filter((booking: Seat) => booking.id !== variables.booking_id)
       );
     },
   });
@@ -62,7 +62,7 @@ export const useDeleteAllMyBookingsMutation = () => {
     },
     onSuccess: () => {
       // ✅ обновляем кэш, чтобы карточка исчезла сразу
-      queryClient.setQueryData(["my-bookings"], (oldData: any) => []);
+      queryClient.setQueryData(["my-bookings"], () => []);
     },
   });
 };

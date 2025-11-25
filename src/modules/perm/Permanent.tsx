@@ -27,7 +27,7 @@ export const Permanent: FC = () => {
   const date = new Date();
   const formattedDate = date.toLocaleDateString("en-CA");
 
-  const { data, isLoading, error } = useMapQuery({
+  const { data } = useMapQuery({
     room: selected,
     date_: formattedDate,
   });
