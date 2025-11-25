@@ -16,7 +16,7 @@ export const router = () =>
       element: <Layout />,
       children: [
         {
-          path: "/",
+          index: true, // <-- главная страница
           element: <MainPage />,
         },
         {

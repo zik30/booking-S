@@ -1,0 +1,17 @@
+.container {
+  margin-top: 80px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  padding: 5px 10px;
+  background-color: var(--black);
+  color: var(--white);
+  border-radius: 16px;
+  transition: 0.2s;
+  width: 100px;
+  &:hover {
+    background-color: #8e8e8e4d;
+  }
+}
