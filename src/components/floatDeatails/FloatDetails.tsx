@@ -91,7 +91,14 @@ export const FloatDetails: FC<Props> = ({
 
       return () => clearTimeout(t);
     }
-  }, [isSuccess, navigate, isSuccessPeriod]);
+    if (isSuccessPerm) {
+      const t = setTimeout(() => {
+        navigate("/");
+      }, 3000);
+
+      return () => clearTimeout(t);
+    }
+  }, [isSuccess, navigate, isSuccessPeriod, isSuccessPerm]);
 
   return (
     <div

@@ -52,7 +52,13 @@ export const Permanent: FC = () => {
           }
         />
         {data && (
-          <SpacesMap map={data} seat={seat} setSeat={(val) => setSeat(val)} />
+          <SpacesMap
+            room={selected}
+            date={formattedDate}
+            map={data}
+            seat={seat}
+            setSeat={(val) => setSeat(val)}
+          />
         )}
         {seat[0] && (seat[1] == 0 || seat[1]) && formattedDate && (
           <FloatDetails room="open_space" row={seat[0]} seat={seat[1] + 1} />

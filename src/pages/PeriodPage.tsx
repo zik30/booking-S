@@ -40,7 +40,13 @@ export const PeriodPage: FC = () => {
       />
       {data && (
         <div ref={mapRef}>
-          <SpacesMap map={data} seat={seat} setSeat={(val) => setSeat(val)} />
+          <SpacesMap
+            room={room}
+            map={data}
+            seat={seat}
+            setSeat={(val) => setSeat(val)}
+            date={startDate?.toLocaleDateString("en-CA")}
+          />
         </div>
       )}
       {isLoading && <Loading />}

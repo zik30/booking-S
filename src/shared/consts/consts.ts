@@ -10,3 +10,5 @@ export const paths = {
 };
 
 export const daysOfWeek = ["ПН", "ВТ", "СР", "ЧТ", "ПТ", "СБ", "ВС"];
+
+export const letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];

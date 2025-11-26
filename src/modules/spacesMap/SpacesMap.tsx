@@ -3,13 +3,14 @@ import type { FC } from "react";
 import type { Seat } from "components/seatMap/types";
 import { Container, Typography } from "shared/ui";
 import styles from "./SpacesMap.module.scss";
-import { useLocation } from "react-router-dom";
 
 type SeatT = [number | null, number | null];
 interface SpacesMapProps {
   seat: SeatT;
   setSeat: (val: SeatT) => void;
   map: Seat[];
+  date: string | undefined;
+  room: "open_space" | "silent";
 }
 
 // const map: Seat[] = [
@@ -214,21 +215,25 @@ interface SpacesMapProps {
 //     state: "free",
 //   },
 // ];
-export const SpacesMap: FC<SpacesMapProps> = ({ seat, setSeat, map }) => {
-  const location = useLocation();
-  const pathnames = location.pathname.split("/").filter((x) => x);
-
+export const SpacesMap: FC<SpacesMapProps> = ({
+  seat,
+  setSeat,
+  map,
+  date,
+  room,
+}) => {
   return (
     <section className={styles.map}>
       <Container className={styles.container}>
         <Typography variant="h3" color="white">
-          Choose a seat in {pathnames[0]} room
+          Choose a seat in {room} room
         </Typography>
         <SeatMap
           seats={map}
           selected={seat}
           setSelected={(val) => setSeat(val)}
-          space={pathnames[0]}
+          space={room}
+          date={date}
         />
       </Container>
     </section>

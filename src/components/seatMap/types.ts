@@ -11,4 +11,5 @@ export interface SeatMapProps {
   selected: SeatT;
   setSelected: (val: SeatT) => void;
   space: string;
+  date: string | undefined;
 }

@@ -36,7 +36,13 @@ export const OpenSpacePage: FC = () => {
 
       {data && (
         <div ref={mapRef}>
-          <SpacesMap map={data} seat={seat} setSeat={(val) => setSeat(val)} />
+          <SpacesMap
+            room="open_space"
+            map={data}
+            seat={seat}
+            setSeat={(val) => setSeat(val)}
+            date={formattedDate}
+          />
         </div>
       )}
 

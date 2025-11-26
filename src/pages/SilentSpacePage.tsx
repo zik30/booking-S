@@ -36,7 +36,13 @@ export const SilentSpacePage: FC = () => {
 
       {data && (
         <div ref={mapRef}>
-          <SpacesMap map={data} seat={seat} setSeat={(val) => setSeat(val)} />
+          <SpacesMap
+            room="silent"
+            map={data}
+            seat={seat}
+            setSeat={(val) => setSeat(val)}
+            date={formattedDate}
+          />
         </div>
       )}
 

@@ -4,13 +4,15 @@ import styles from "./SeatMap.module.scss";
 import { Typography } from "shared/ui";
 import { Laptop } from "lucide-react";
 import classNames from "classnames";
-import { ToolTip } from "shared/ui/tooltip/Tooltip";
+import { InfoTooltip } from "components/infoTooltip/InfoTooltip";
+import { letters } from "shared/consts/consts";
 
 export const SeatMap: FC<SeatMapProps> = ({
   seats,
   selected,
   setSelected,
   space,
+  date,
 }) => {
   const maxRow = Math.max(...seats.map((s) => s.row));
   const maxSeat = Math.max(...seats.map((s) => s.seat));
@@ -36,7 +38,7 @@ export const SeatMap: FC<SeatMapProps> = ({
               <th key={i}>
                 <div className={styles.cell}>
                   <Typography variant="h3" color="white" weight="semiBold">
-                    S{i + 1}
+                    S{maxSeat - i}
                   </Typography>
                 </div>
               </th>
@@ -51,7 +53,7 @@ export const SeatMap: FC<SeatMapProps> = ({
               <tr key={row}>
                 <td>
                   <Typography variant="h3" weight="semiBold" color="white">
-                    Row {row}
+                    Row {letters[row - 1]}
                   </Typography>
                 </td>
 
@@ -72,7 +74,7 @@ export const SeatMap: FC<SeatMapProps> = ({
                           ? styles.perm
                           : state === "-"
                           ? styles.noSeat
-                          : space == "permanent"
+                          : state == "permanent"
                           ? styles.free
                           : styles.taken
                       }
@@ -87,9 +89,15 @@ export const SeatMap: FC<SeatMapProps> = ({
                             : ""
                         )}
                       >
-                        <ToolTip label={state}>
+                        <InfoTooltip
+                          state={state}
+                          room={space as "open_space" | "silent"}
+                          row={row}
+                          seat={seat}
+                          date={date}
+                        >
                           <Laptop size={28} strokeWidth={1.75} />
-                        </ToolTip>
+                        </InfoTooltip>
                       </div>
                     </td>
                   );
