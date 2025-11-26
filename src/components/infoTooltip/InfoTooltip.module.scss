@@ -17,7 +17,7 @@
   opacity: 0;
   visibility: hidden;
 
-  background: rgba(0, 0, 0, 0.9);
+  background: var(--tg-theme-header-bg-color);
   padding: 6px 10px;
   border-radius: 6px;
   white-space: nowrap;
