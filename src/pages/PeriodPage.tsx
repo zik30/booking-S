@@ -24,10 +24,10 @@ export const PeriodPage: FC = () => {
   }, [startDate, setStartDate]);
 
   useEffect(() => {
-    if (data && mapRef.current) {
+    if (data && mapRef.current && finishDate) {
       mapRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
     }
-  }, [data]);
+  }, [data, finishDate]);
   return (
     <div>
       <PeriodCalendar

@@ -2,7 +2,6 @@
   position: relative;
   display: inline-block;
 
-  // Показываем tooltip только при наведении
   &:hover .tooltip {
     opacity: 1;
     visibility: visible;
@@ -29,7 +28,6 @@
 
   transition: all 0.2s ease;
 
-  // Стрелочка
   &::after {
     content: "";
     position: absolute;
