@@ -39,7 +39,7 @@ export const PeriodPage: FC = () => {
         setFinishDate={(val: Date | null) => setFinishDate(val)}
       />
       {data && (
-        <div ref={mapRef}>
+        <div ref={mapRef} style={{ width: "100%" }}>
           <SpacesMap
             room={room}
             map={data}

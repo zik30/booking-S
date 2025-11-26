@@ -55,7 +55,7 @@ export const InfoTooltip: FC<ToolTipProps> = ({
         {data ? (
           <>
             <Typography variant="bodyText" color="white" weight="semiBold">
-              {data.full_name}
+              {data.full_name} - {data.user_id}
             </Typography>
             <Typography variant="bodyText" color="white">
               {data.position}
@@ -67,7 +67,7 @@ export const InfoTooltip: FC<ToolTipProps> = ({
               {isSuccessReport ? (
                 "Report is sent"
               ) : errorReport ? (
-                "Send report again"
+                "Error! Send report again"
               ) : isPendingReport ? (
                 <Loading />
               ) : (

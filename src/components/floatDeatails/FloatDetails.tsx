@@ -33,6 +33,7 @@ export const FloatDetails: FC<Props> = ({
     reset: resetPerm,
   } = useBookPermMutation();
   const {
+    data: dataPeriod,
     mutate: bookPeriod,
     isPending: isPendingPeriod,
     isSuccess: isSuccessPeriod,
@@ -134,7 +135,7 @@ export const FloatDetails: FC<Props> = ({
 
       {(error || errorPerm || errorPeriod) && (
         <Typography variant="bodyText" color="white">
-          {error?.message || errorPerm?.message}
+          {error?.message || errorPerm?.message || dataPeriod}
         </Typography>
       )}
 

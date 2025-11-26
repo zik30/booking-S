@@ -1,7 +1,7 @@
 :root {
-  --bgc: #494b56;
-  --black: #373c45;
-  --blue: #1c5d99;
-  --white: #fcfcfc;
-  --grey: #939393;
+  --bgc: var(--tg-theme-bg-color);
+  --black: var(--tg-theme-secondary-bg-color);
+  --blue: var(--tg-theme-button-color);
+  --white: var(--tg-theme-text-color);
+  --grey: var(--tg-theme-subtitle-text-color);
 }

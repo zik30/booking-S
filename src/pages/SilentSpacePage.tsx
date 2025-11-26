@@ -35,7 +35,7 @@ export const SilentSpacePage: FC = () => {
       <SpacesCalendar date={date} setDate={(val) => setDate(val)} />
 
       {data && (
-        <div ref={mapRef}>
+        <div ref={mapRef} style={{ width: "100%" }}>
           <SpacesMap
             room="silent"
             map={data}
