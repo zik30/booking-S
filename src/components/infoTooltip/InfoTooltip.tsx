@@ -65,13 +65,13 @@ export const InfoTooltip: FC<ToolTipProps> = ({
             </Typography>
             <Button variant="primary" onClick={handleReport}>
               {isSuccessReport ? (
-                "Report is sent"
+                "📋Репорт отправлен"
               ) : errorReport ? (
-                "Error! Send report again"
+                "❌Ошибка, попробуйте еще раз!"
               ) : isPendingReport ? (
                 <Loading />
               ) : (
-                "Report"
+                "📋Репорт"
               )}
             </Button>
           </>
@@ -83,7 +83,7 @@ export const InfoTooltip: FC<ToolTipProps> = ({
         {isPending && shouldFetch && <Loading />}
         {error && (
           <Typography variant="bodyText" color="white" weight="semiBold">
-            Seat is not booked
+            ❌Место не забронировано!
           </Typography>
         )}
       </div>

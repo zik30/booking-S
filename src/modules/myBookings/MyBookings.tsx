@@ -38,7 +38,7 @@ export const MyBookings: FC = () => {
             align="center"
             color="white"
           >
-            My Bookings
+            📋Мои брони
           </Typography>
           <ToggleSwitch
             options={options}
@@ -46,7 +46,7 @@ export const MyBookings: FC = () => {
             setSelected={(val) => setSelected(val)}
           />
           <Button variant="secondary" onClick={handleClear}>
-            cancel all
+            ❌Отменить все
           </Button>
         </div>
         <div className={styles.cards}>
@@ -65,7 +65,7 @@ export const MyBookings: FC = () => {
           ) : (
             <div className={styles.noBookings}>
               <Typography variant="h2" weight="semiBold" color="white">
-                No Bookings Yet!
+                Броней ещё нет!
               </Typography>
             </div>
           )}

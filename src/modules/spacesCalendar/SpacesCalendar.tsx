@@ -26,7 +26,7 @@ export const SpacesCalendar: FC<PlacesCalProps> = ({ date, setDate }) => {
           {pathnames[0]}
         </Typography>
         <Typography className={styles.subtitle} variant="h3" color="white">
-          Choose a date for booking a seat
+          📆Выберите дату
         </Typography>
         <div className={styles.calendarContainer}>
           <Calendar date={date} setDate={(val) => setDate(val)} />

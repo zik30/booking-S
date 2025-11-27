@@ -113,20 +113,20 @@ export const FloatDetails: FC<Props> = ({
         <>
           {date && (
             <Typography variant="bodyText" color="white">
-              Date: {date} {finishDate ? " - " + finishDate : ""}
+              📆Дата: {date} {finishDate ? " - " + finishDate : ""}
             </Typography>
           )}
 
           <Typography variant="bodyText" color="white">
             {" "}
-            Room: {room}
+            🏢Комната: {room}
           </Typography>
           <Typography variant="bodyText" color="white">
-            Row: {row}
+            💻Ряд: {row}
           </Typography>
 
           <Typography variant="bodyText" color="white">
-            Seat: {seat}
+            💻Место: {seat}
           </Typography>
         </>
       )}
@@ -141,17 +141,17 @@ export const FloatDetails: FC<Props> = ({
 
       {isSuccess && (
         <Typography variant="bodyText" color="white">
-          Seat successfully booked!
+          💻Место забронировано!
         </Typography>
       )}
       {isSuccessPerm && (
         <Typography variant="bodyText" color="white">
-          Permanent seat request is sent!
+          🔒Запрос на постоянное бронирование отправлен!
         </Typography>
       )}
       {isSuccessPeriod && (
         <Typography variant="bodyText" color="white">
-          Multi-request is sent!
+          💻Место забронировано на несколько дней!
         </Typography>
       )}
     </div>

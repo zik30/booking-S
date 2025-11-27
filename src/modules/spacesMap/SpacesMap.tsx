@@ -226,7 +226,7 @@ export const SpacesMap: FC<SpacesMapProps> = ({
     <section className={styles.map}>
       <Container className={styles.container}>
         <Typography variant="h3" color="white">
-          Choose a seat in {room} room
+          💻Выберите место в {room} room
         </Typography>
         <SeatMap
           seats={map}

@@ -23,13 +23,13 @@ export const BookingCard: FC<Props> = ({ room, date, row, seat, id }) => {
     <div className={styles.card}>
       <div className={styles.details}>
         <Typography variant="bodyText" color="white">
-          Room: {room}
+          🏢Комната: {room}
         </Typography>
         <Typography variant="bodyText" color="white">
-          Seat: R{row} S{seat}
+          💻Место: R{row} S{seat}
         </Typography>
         <Typography variant="bodyText" color="white">
-          Date: {date}
+          📆Дата: {date}
         </Typography>
       </div>
       <div className={styles.control} onClick={handleDelete}>

@@ -192,9 +192,10 @@ const Calendar: FC<ICalendarProps> = ({
       </div>
       <div className={styles.bottomPanel}>
         <Typography variant="h3" color="black">
-          Selected Date:
+          Выбранная дата:
         </Typography>
         <Typography variant="h3" color="black" weight="semiBold">
+          📆{" "}
           {date?.toLocaleString("default", {
             year: "numeric",
             month: "short",

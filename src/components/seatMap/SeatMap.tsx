@@ -109,7 +109,7 @@ export const SeatMap: FC<SeatMapProps> = ({
       </table>
       <div className={styles.panel}>
         <Typography variant="h3" color="black" weight="semiBold">
-          Selected seat:
+          💻Выбранное место:
         </Typography>
         <Typography variant="bodyText" color="black">
           {selected[0] && (selected[1] == 0 || selected[1])

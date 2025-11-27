@@ -11,27 +11,27 @@ export const NavModule: FC = () => {
         <nav>
           <Link to={paths.openSpace}>
             <Button variant="secondary" fullwidth>
-              Open-space
+              🌐Open-space
             </Button>
           </Link>
           <Link to={paths.silentSpace}>
             <Button variant="secondary" fullwidth>
-              Silent-space
+              🤫Silent-space
             </Button>
           </Link>
           <Link to={paths.myBookings}>
             <Button variant="secondary" fullwidth>
-              My Bookings
+              📋Мои брони
             </Button>
           </Link>
           <Link to={paths.period}>
             <Button variant="secondary" fullwidth>
-              Multi booking
+              📅Бронирования на несколько дней
             </Button>
           </Link>
           <Link to={paths.permanent}>
             <Button variant="secondary" fullwidth>
-              Permanent booking
+              🔒Постоянное бронирование
             </Button>
           </Link>
         </nav>

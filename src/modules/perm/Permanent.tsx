@@ -42,7 +42,7 @@ export const Permanent: FC = () => {
           transform="uppercase"
           className={styles.title}
         >
-          choose a space
+          🏢Выберите комнату
         </Typography>
         <ToggleSwitch
           options={spaces}

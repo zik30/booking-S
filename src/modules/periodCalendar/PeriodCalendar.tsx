@@ -36,10 +36,10 @@ export const PeriodCalendar: FC<Props> = ({
       <Container className={styles.container}>
         <div className={styles.text}>
           <Typography variant="h3" color="white">
-            Select multiple dates
+            📆Выберите несколько дней
           </Typography>
           <Typography variant="h3" color="white">
-            select a room
+            🏢Выберите комнату
           </Typography>
           <ToggleSwitch
             options={options}
