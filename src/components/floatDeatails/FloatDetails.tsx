@@ -68,6 +68,15 @@ export const FloatDetails: FC<Props> = ({
     date && finishDate && period(new Date(date), new Date(finishDate));
 
   const handleClick = () => {
+    if (
+      isPending ||
+      isPendingPeriod ||
+      isPendingPerm ||
+      isSuccess ||
+      isSuccessPeriod ||
+      isSuccessPerm
+    )
+      return;
     if (date && finishDate && dates) {
       bookPeriod({ room, row, seat, dates });
     } else if (date) {
@@ -105,7 +114,7 @@ export const FloatDetails: FC<Props> = ({
     <div
       className={classNames(
         styles.container,
-        isSuccess || isSuccessPerm ? styles.success : ""
+        isSuccess || isSuccessPerm || isSuccessPeriod ? styles.success : ""
       )}
       onClick={handleClick}
     >
